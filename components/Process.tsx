@@ -7,7 +7,7 @@ const stepIcons = ["search", "pencil", "blocks", "rocket"];
 
 export default function Process() {
   return (
-    <section id="process" className="scroll-mt-24 bg-slate-50 py-24 sm:py-28">
+    <section id="process" className="scroll-mt-4 bg-slate-50 py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="How It Works"

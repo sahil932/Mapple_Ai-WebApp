@@ -43,7 +43,7 @@ export default function Services() {
               <Reveal
                 key={s.id}
                 id={`service-${s.id}`}
-                className="scroll-mt-28"
+                className="scroll-mt-4"
               >
                 <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
                   {/* text side */}
