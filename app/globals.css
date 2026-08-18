@@ -48,7 +48,7 @@
 
 html { scroll-padding-top: 80px; scroll-padding-top: 80px;
   scroll-behavior: smooth;
-  scroll-padding-top: 0rem; /* offset fixed header for anchor links */
+  scroll-padding-top: 5rem; /* offset fixed header for anchor links */
   -webkit-text-size-adjust: 100%;
 }
 
