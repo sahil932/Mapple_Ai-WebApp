@@ -4,12 +4,14 @@ import Reveal from "./Reveal";
 
 export default function WhyUs() {
   return (
-    <section id="about" className="relative scroll-mt-20 overflow-x-clip bg-navy-950 py-20 sm:py-24">
+    <section id="about" className="relative scroll-mt-24 overflow-x-clip bg-navy-950 py-24 sm:py-28">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="bg-grid absolute inset-0 opacity-60" />
         <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-brand-600/15 blur-[120px]" />
       </div>
+
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        {/* about */}
         <Reveal>
           <span className="eyebrow !text-brand-300">
             <span className="h-px w-6 bg-current opacity-60" />
@@ -27,6 +29,7 @@ export default function WhyUs() {
             The goal is simple: save your team time, capture more of the leads you are already
             earning, and give your business room to grow.
           </p>
+
           <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
             <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-500 text-white">
               <SparklesIcon className="h-5 w-5" />
@@ -37,6 +40,8 @@ export default function WhyUs() {
             </p>
           </div>
         </Reveal>
+
+        {/* reasons */}
         <div className="grid gap-5 sm:grid-cols-2">
           {whyUs.map((w, i) => (
             <Reveal key={w.title} delay={i * 80}>

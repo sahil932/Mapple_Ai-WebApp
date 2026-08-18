@@ -5,13 +5,14 @@ import Reveal from "./Reveal";
 
 export default function Industries() {
   return (
-    <section id="industries" className="scroll-mt-20 bg-white py-20 sm:py-24">
+    <section id="industries" className="scroll-mt-24 bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Industries We Serve"
           title="Built for service-based businesses"
           subtitle="We work closely with the industries below — and our solutions adapt well to many other service businesses too."
         />
+
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {industries.map((ind, i) => (
             <Reveal key={ind.title} delay={i * 80}>

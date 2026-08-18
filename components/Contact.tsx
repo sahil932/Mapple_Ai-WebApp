@@ -62,7 +62,7 @@ export default function Contact() {
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (hp) {
-      setStatus("success");
+      setStatus("success"); // silently drop bots
       return;
     }
     setStatus("sending");
@@ -99,7 +99,7 @@ export default function Contact() {
     "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[15px] text-navy-900 placeholder:text-slate-400 transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100";
 
   return (
-    <section id="contact" className="scroll-mt-20 bg-white py-20 sm:py-24">
+    <section id="contact" className="scroll-mt-24 bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* info */}
@@ -166,12 +166,16 @@ export default function Contact() {
                     ? "Thanks for reaching out. We've received your message and will get back to you shortly."
                     : "Your email app should have opened with the details ready to send. Just press send and we'll take it from there."}
                 </p>
-                <button onClick={() => setStatus("idle")} className="btn btn-ghost mt-8">
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="btn btn-ghost mt-8"
+                >
                   Send another message
                 </button>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-4" noValidate>
+                {/* honeypot */}
                 <input
                   type="text"
                   tabIndex={-1}
