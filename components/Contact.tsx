@@ -99,7 +99,7 @@ export default function Contact() {
     "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[15px] text-navy-900 placeholder:text-slate-400 transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100";
 
   return (
-    <section id="contact" className="scroll-mt-24 bg-white py-24 sm:py-28">
+    <section id="contact" className="scroll-mt-16 bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* info */}
