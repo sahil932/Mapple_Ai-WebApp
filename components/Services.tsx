@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-20 bg-white py-24 sm:py-28">
+    <section id="services" className="scroll-mt-4 bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Our Services"
