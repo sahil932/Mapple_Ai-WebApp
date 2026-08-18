@@ -46,9 +46,9 @@
   --foreground: #0b1220;
 }
 
-html {
+html { scroll-padding-top: 80px;
   scroll-behavior: smooth;
-  scroll-padding-top: 6.5rem; /* offset fixed header for anchor links */
+  scroll-padding-top: 0rem; /* offset fixed header for anchor links */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -222,7 +222,7 @@ body {
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html { scroll-padding-top: 80px; scroll-behavior: auto; }
   *,
   *::before,
   *::after {
