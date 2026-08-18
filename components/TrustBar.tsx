@@ -8,7 +8,7 @@ const served = [
 
 export default function TrustBar() {
   return (
-    <div className="relative z-10 mx-auto -mt-24 max-w-6xl px-6 lg:-mt-28">
+    <div className="relative z-10 mx-auto -mt-8 max-w-6xl px-6 lg:-mt-10">
       <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_24px_60px_-30px_rgba(2,6,23,0.4)] sm:p-7">
         <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
           <div className="flex items-center gap-4">
