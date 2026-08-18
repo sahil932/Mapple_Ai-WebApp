@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Problems() {
   return (
-    <section className="bg-slate-50 py-24 sm:py-28">
+    <section className="bg-slate-50 py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="The Challenges"

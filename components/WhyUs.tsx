@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function WhyUs() {
   return (
-    <section id="about" className="relative scroll-mt-4 overflow-x-clip bg-navy-950 py-24 sm:py-28">
+    <section id="about" className="relative scroll-mt-4 overflow-x-clip bg-navy-950 py-16 sm:py-20">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="bg-grid absolute inset-0 opacity-60" />
         <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-brand-600/15 blur-[120px]" />
