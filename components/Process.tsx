@@ -7,21 +7,15 @@ const stepIcons = ["search", "pencil", "blocks", "rocket"];
 
 export default function Process() {
   return (
-    <section id="process" className="scroll-mt-16 bg-slate-50 py-24 sm:py-28">
+    <section id="process" className="scroll-mt-20 bg-slate-50 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="How It Works"
           title="A simple, proven process"
           subtitle="From first conversation to launch and beyond, we keep every step clear and low-effort on your side."
         />
-
         <div className="relative mt-16">
-          {/* connecting line (desktop) */}
-          <div
-            aria-hidden
-            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-brand-200 via-brand-300 to-violet-200 lg:block"
-          />
-
+          <div aria-hidden className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-brand-200 via-brand-300 to-violet-200 lg:block" />
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {process.map((step, i) => (
               <Reveal key={step.title} delay={i * 90}>

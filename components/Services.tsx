@@ -5,19 +5,17 @@ import Reveal from "./Reveal";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-16 bg-white py-24 sm:py-28">
+    <section id="services" className="scroll-mt-20 bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Our Services"
           title="Everything you need to automate and grow"
           subtitle="Five focused services that work on their own or together — matched to the parts of your business that need them most."
         />
-
-        {/* card grid */}
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.id} delay={i * 70}>
-              <a
+              
                 href={`#service-${s.id}`}
                 className="group flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_2px_10px_-6px_rgba(2,6,23,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-[0_24px_50px_-24px_rgba(37,99,235,0.4)]"
               >
@@ -34,19 +32,12 @@ export default function Services() {
             </Reveal>
           ))}
         </div>
-
-        {/* detailed blocks */}
         <div className="mt-24 space-y-20">
           {services.map((s, i) => {
             const reversed = i % 2 === 1;
             return (
-              <Reveal
-                key={s.id}
-                id={`service-${s.id}`}
-                className="scroll-mt-28"
-              >
+              <Reveal key={s.id} id={`service-${s.id}`} className="scroll-mt-20">
                 <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-                  {/* text side */}
                   <div className={reversed ? "lg:order-2" : ""}>
                     <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-500 text-white shadow-[0_12px_30px_-10px_rgba(79,110,242,0.7)]">
                       <Icon name={s.icon} className="h-7 w-7" />
@@ -55,16 +46,11 @@ export default function Services() {
                       {s.title}
                     </h3>
                     <p className="mt-4 text-[17px] leading-relaxed text-slate-600">{s.summary}</p>
-                    <a
-                      href="#contact"
-                      className="btn btn-primary mt-6 inline-flex"
-                    >
+                    <a href="#contact" className="btn btn-primary mt-6 inline-flex">
                       <CalendarIcon className="h-4 w-4" />
                       Get a free consultation
                     </a>
                   </div>
-
-                  {/* points side */}
                   <div className={reversed ? "lg:order-1" : ""}>
                     <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-6 sm:p-8">
                       <p className="mb-4 text-xs font-bold uppercase tracking-wider text-slate-400">
