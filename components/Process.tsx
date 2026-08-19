@@ -7,7 +7,7 @@ const stepIcons = ["search", "pencil", "blocks", "rocket"];
 
 export default function Process() {
   return (
-    <section id="process" className="scroll-mt-4 bg-slate-50 pt-8 pb-16 sm:pt-10 sm:pb-20">
+    <section id="process" className="bg-slate-50 pt-8 pb-16 sm:pt-10 sm:pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="How It Works"

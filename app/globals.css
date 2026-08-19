@@ -47,7 +47,7 @@
 }
 
 html { scroll-padding-top: 80px; scroll-padding-top: 80px;
-  scroll-behavior: smooth; background-color: #050a1c;
+  scroll-behavior: smooth; background-color: #050a1c; background-color: #050a1c;
   scroll-padding-top: 4.5rem; /* offset fixed header for anchor links */
   -webkit-text-size-adjust: 100%;
 }

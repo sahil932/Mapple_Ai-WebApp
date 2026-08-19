@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-4 bg-white pt-8 pb-16 sm:pt-10 sm:pb-20">
+    <section id="services" className="bg-white pt-8 pb-16 sm:pt-10 sm:pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Our Services"
@@ -43,7 +43,7 @@ export default function Services() {
               <Reveal
                 key={s.id}
                 id={`service-${s.id}`}
-                className="scroll-mt-4"
+                className=""
               >
                 <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
                   {/* text side */}
