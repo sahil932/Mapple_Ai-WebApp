@@ -17,8 +17,10 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
-        <TrustBar />
+        <div className="bg-navy-950">
+          <Hero />
+          <TrustBar />
+        </div>
         <Services />
         <Problems />
         <Industries />
