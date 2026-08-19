@@ -26,12 +26,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b bg-white/90 backdrop-blur transition-shadow ${
-        scrolled ? "border-slate-200 shadow-[0_6px_24px_-16px_rgba(2,6,23,0.5)]" : "border-transparent"
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "border-slate-200 bg-white/90 shadow-[0_6px_24px_-16px_rgba(2,6,23,0.5)] backdrop-blur"
+          : "border-transparent bg-navy-950"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
-        <a href="#home" aria-label={`${"Mapple AI"} home`}>
+        <a href="#home" aria-label="Mapple AI home">
           <Logo />
         </a>
 
@@ -41,7 +43,11 @@ export default function Navbar() {
             item.label === "Services" ? (
               <li key={item.label} className="group relative">
                 <button
-                  className="flex items-center gap-1 rounded-lg px-3.5 py-2 text-[15px] font-medium text-slate-600 transition-colors group-hover:text-brand-700 group-focus-within:text-brand-700"
+                  className={`flex items-center gap-1 rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors ${
+                    scrolled
+                      ? "text-slate-600 hover:text-brand-700"
+                      : "text-slate-200 hover:text-white"
+                  }`}
                   aria-haspopup="true"
                 >
                   Services
@@ -51,7 +57,7 @@ export default function Navbar() {
                 <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-[0_20px_50px_-20px_rgba(2,6,23,0.4)]">
                     {services.map((s) => (
-                      <a
+                      
                         key={s.id}
                         href={`#service-${s.id}`}
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-brand-50"
@@ -67,9 +73,13 @@ export default function Navbar() {
               </li>
             ) : (
               <li key={item.label}>
-                <a
+                
                   href={item.href}
-                  className="rounded-lg px-3.5 py-2 text-[15px] font-medium text-slate-600 transition-colors hover:text-brand-700"
+                  className={`rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors ${
+                    scrolled
+                      ? "text-slate-600 hover:text-brand-700"
+                      : "text-slate-200 hover:text-white"
+                  }`}
                 >
                   {item.label}
                 </a>
@@ -79,11 +89,15 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a
+          
             href={site.phone.href}
-            className="hidden items-center gap-1.5 text-sm font-semibold text-slate-600 transition-colors hover:text-brand-700 xl:flex"
+            className={`hidden items-center gap-1.5 text-sm font-semibold transition-colors xl:flex ${
+              scrolled
+                ? "text-slate-600 hover:text-brand-700"
+                : "text-slate-200 hover:text-white"
+            }`}
           >
-            <PhoneIcon className="h-4 w-4 text-brand-600" />
+            <PhoneIcon className={`h-4 w-4 ${scrolled ? "text-brand-600" : "text-brand-400"}`} />
             {site.phone.display}
           </a>
           <a href="#contact" className="btn btn-primary hidden sm:inline-flex">
@@ -92,7 +106,11 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-navy-900 lg:hidden"
+            className={`grid h-10 w-10 place-items-center rounded-lg border lg:hidden ${
+              scrolled
+                ? "border-slate-200 text-navy-900"
+                : "border-white/20 text-white"
+            }`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -105,8 +123,7 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-100 bg-white lg:hidden">
           <div className="mx-auto max-w-7xl px-6 py-4">
-            {/* phone — first thing visible when menu opens */}
-            <a
+            
               href={site.phone.href}
               onClick={() => setOpen(false)}
               className="mb-3 flex items-center gap-3 rounded-xl bg-brand-50 px-4 py-3"
@@ -135,7 +152,7 @@ export default function Navbar() {
                     {servicesOpen && (
                       <div className="pb-2">
                         {services.map((s) => (
-                          <a
+                          
                             key={s.id}
                             href={`#service-${s.id}`}
                             onClick={() => setOpen(false)}
@@ -150,7 +167,7 @@ export default function Navbar() {
                   </li>
                 ) : (
                   <li key={item.label} className="border-b border-slate-50">
-                    <a
+                    
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className="block py-3 text-base font-medium text-navy-900"
@@ -161,7 +178,7 @@ export default function Navbar() {
                 )
               )}
             </ul>
-            <a
+            
               href="#contact"
               onClick={() => setOpen(false)}
               className="btn btn-primary mt-4 w-full"
