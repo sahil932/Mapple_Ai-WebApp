@@ -55,7 +55,7 @@ export default function Navbar() {
                 <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-[0_20px_50px_-20px_rgba(2,6,23,0.4)]">
                     {services.map((s) => (
-                      
+                      <a
                         key={s.id}
                         href={`#service-${s.id}`}
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-brand-50"
