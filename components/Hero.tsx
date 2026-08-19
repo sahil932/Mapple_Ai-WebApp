@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-x-clip bg-navy-950 pb-40 pt-14 lg:pb-52 lg:pt-20"
+      className="relative overflow-x-clip bg-navy-950 pb-20 pt-14 lg:pb-28 lg:pt-20"
     >
       {/* backdrop */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
