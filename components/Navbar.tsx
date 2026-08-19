@@ -37,7 +37,6 @@ export default function Navbar() {
           <Logo />
         </a>
 
-        {/* desktop links */}
         <ul className="hidden items-center gap-1 lg:flex">
           {nav.map((item) =>
             item.label === "Services" ? (
@@ -53,7 +52,6 @@ export default function Navbar() {
                   Services
                   <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
                 </button>
-                {/* dropdown */}
                 <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-[0_20px_50px_-20px_rgba(2,6,23,0.4)]">
                     {services.map((s) => (
@@ -119,7 +117,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* mobile menu */}
       {open && (
         <div className="border-t border-slate-100 bg-white lg:hidden">
           <div className="mx-auto max-w-7xl px-6 py-4">
